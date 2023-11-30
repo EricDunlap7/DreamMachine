@@ -38,6 +38,6 @@ function generateRandomSentence() {
   }
 }
 
-function whatAmI() {
-  alert("You are awesome!");
-}
+// function whatAmI() {
+//   alert("You are awesome!");
+// }

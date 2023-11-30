@@ -45,5 +45,5 @@ function performSearch() {
 
 window.onload = function () {
   populateImages();
-  alert("hello from showcase.js");
+  // alert("hello from showcase.js");
 };
