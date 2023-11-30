@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "C64 Pro STYLE";
+  src: url("C64_Pro-STYLE.ttf") format("truetype");
+  /* Add other font formats as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
