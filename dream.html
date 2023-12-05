@@ -4,24 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
+    <script defer src="main.js"></script>
     <title>Your Website</title>
   </head>
   <body>
     <header>
       <button id="submitBtn">
-        <a href="submit.html" style="text-decoration: none; color: white"
+        <a
+          href="#"
+          onclick="redirectToSubmit()"
+          style="text-decoration: none; color: #00ff00"
           >Submit</a
         >
       </button>
 
       <button id="dreamBtn">
-        <a href="dream.html" style="text-decoration: none; color: white"
+        <a
+          href="#"
+          onclick="redirectToDream()"
+          style="text-decoration: none; color: #00ff00"
           >DreamMachine</a
         >
       </button>
 
       <button id="showcaseBtn">
-        <a href="showcase.html" style="text-decoration: none; color: white"
+        <a
+          href="#"
+          onclick="redirectToShowcase()"
+          style="text-decoration: none; color: #00ff00"
           >Showcase</a
         >
       </button>
@@ -29,17 +39,20 @@
 
     <main>
       <div class="center-box" id="sentenceBox"></div>
-      <button id="generateBtn">Generate Sentence</button>
+      <button id="generateBtn" onclick="generateRandomSentence()">
+        Generate Sentence
+      </button>
     </main>
 
     <footer>
       <button id="whatAmIBtn">
-        <a href="whatami.html" style="text-decoration: none; color: white"
+        <a
+          href="#"
+          onclick="redirectToWhatAmI()"
+          style="text-decoration: none; color: #00ff00"
           >What am I</a
         >
       </button>
     </footer>
-
-    <script src="main.js"></script>
   </body>
 </html>

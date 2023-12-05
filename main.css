@@ -1,14 +1,13 @@
-/* Your existing styles below */
 body {
-  font-family: "Commodore64", Arial, sans-serif; /* Use the new font */
+  font-family: "Commodore64", Arial, sans-serif;
   margin: 0;
   padding: 0;
   position: relative;
-  background-color: #000; /* Set the background color to black */
-  background-image: url("DreamMachineBackdrop.png"); /* Add the background image path */
-  background-size: contain; /* Adjust to contain the entire image within the viewport */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  background-position: center; /* Center the background image */
+  background-color: #000;
+  background-image: url("DreamMachineBackdrop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 body::before {
@@ -18,65 +17,134 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("buttoncontainers.png"); /* Add the correct path */
-  background-size: cover; /* Adjust to cover the entire pseudo-element */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  z-index: 1; /* Ensure the borders image is on top of the background image */
+  background-image: url("buttoncontainers.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0; /* Adjusted z-index */
 }
 
-/* Updated styles for invisible header and footer */
 header {
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  background-color: transparent; /* Set the background color to transparent */
-  color: #00ff00; /* Neon green text color */
-  z-index: 2; /* Ensure the header is on top */
+  background-color: transparent;
+  color: #00ff00;
+  z-index: 2;
 }
 
 main {
   display: flex;
-  flex-direction: column; /* Added to stack items vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
+  z-index: 1; /* Ensure main content is above button containers */
 }
+
+/* Your existing styles below */
 
 .center-box {
+  font-size: 25px;
   text-align: center;
   padding: 20px;
-  border: 2px solid rgba(51, 51, 51, 0.7); /* Adjust the alpha value for transparency */
-  margin-bottom: 10px; /* Adjust this value to your preference */
+  border: 2px solid rgba(0, 0, 0, 0);
+  color: #00ff00;
+  margin-bottom: 350px;
+  margin-right: 41px;
+  width: 300px;
+  word-wrap: break-word;
 }
 
-/* Adjusted z-index for all buttons */
+/* Rest of your existing styles */
+
+/* Your existing styles above */
+
 button {
-  z-index: 3; /* Ensure all buttons are on top of the containers image */
+  position: relative;
+  z-index: 2; /* Ensure buttons are above button containers */
+}
+
+#submitBtn,
+#dreamBtn,
+#showcaseBtn,
+#whatAmIBtn,
+#generateBtn {
+  color: #00ff00;
+}
+
+#submitBtn {
+  font-size: 25px;
+  padding: 20px;
+  width: 320px;
+  height: 50px;
+  margin-left: 50px;
+  margin-top: 25px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#dreamBtn {
+  font-size: 70px;
+  padding: 15px;
+  width: 830px;
+  height: 100px;
+  margin-left: 50px;
+  margin-top: 5px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#showcaseBtn {
+  font-size: 25px;
+  padding: 25px;
+  width: 320px;
+  height: 40px;
+  margin-left: 50px;
+  margin-top: 33px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#whatAmIBtn {
+  width: 215px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #00ff00;
+  margin-right: 1485px;
+  margin-bottom: 25px;
 }
 
 #generateBtn {
-  padding: 10px;
-  font-size: 16px;
-  margin: 5px;
+  width: 50px; /* Set the width and height to create a circular button */
+  height: 50px;
+  margin-right: 803px;
+  margin-bottom: 20px;
+  border-radius: 50%; /* Make it circular */
+  background-color: #fff; /* Solid white background */
   position: fixed;
-  bottom: 350px; /* Adjust the distance from the bottom as needed */
-  background-color: rgba(
-    51,
-    51,
-    51,
-    0.7
-  ); /* Adjust the alpha value for transparency */
-  color: #00ff00; /* Neon green text color */
-  z-index: 4; /* Ensure the generate button is on top of other buttons */
+  bottom: 350px;
+  right: 50px; /* Adjusted position for better placement */
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+#generateBtn::before {
+  content: ""; /* Use pseudo-element to create the circle */
+  width: 30px; /* Adjust the inner circle size */
+  height: 30px;
+  background-color: #00ff00; /* Inner circle color */
+  border-radius: 50%;
+  display: block;
 }
 
 footer {
   text-align: center;
   padding: 10px;
-  background-color: transparent; /* Set the background color to transparent */
+  background-color: transparent;
   position: fixed;
   bottom: 0;
   width: 100%;
-  color: #00ff00; /* Neon green text color */
-  z-index: 2; /* Ensure the footer is on top */
+  color: #00ff00;
+  z-index: 2;
 }

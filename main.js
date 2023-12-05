@@ -20,7 +20,16 @@ const sentences = [
 document
   .getElementById("generateBtn")
   .addEventListener("click", generateRandomSentence);
-document.getElementById("whatAmIBtn").addEventListener("click", whatAmI);
+document
+  .getElementById("whatAmIBtn")
+  .addEventListener("click", redirectToWhatAmI);
+document
+  .getElementById("submitBtn")
+  .addEventListener("click", redirectToSubmit);
+document.getElementById("dreamBtn").addEventListener("click", redirectToDream);
+document
+  .getElementById("showcaseBtn")
+  .addEventListener("click", redirectToShowcase);
 
 function generateRandomSentence() {
   const sentenceBox = document.getElementById("sentenceBox");
@@ -38,6 +47,18 @@ function generateRandomSentence() {
   }
 }
 
-// function whatAmI() {
-//   alert("You are awesome!");
-// }
+function redirectToWhatAmI() {
+  window.location.href = "whatami.html";
+}
+
+function redirectToSubmit() {
+  window.location.href = "submit.html";
+}
+
+function redirectToDream() {
+  window.location.href = "dream.html";
+}
+
+function redirectToShowcase() {
+  window.location.href = "showcase.html";
+}
