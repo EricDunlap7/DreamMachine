@@ -1,10 +1,22 @@
-/* showcase.css */
+/* Add this at the top of your CSS file */
 
+@font-face {
+  font-family: "Roboto";
+  src: url("Fonts/Commodore-64-v6.3.TTF") format("truetype");
+  /* Add other font formats as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Your existing styles below */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Commodore-64-v6.3", Arial, sans-serif; /* Use the new font */
   margin: 0;
   padding: 0;
 }
+
+/* Rest of your CSS */
+
 header {
   display: flex;
   justify-content: space-around;

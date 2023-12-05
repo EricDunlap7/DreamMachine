@@ -1,27 +1,42 @@
-@font-face {
-  font-family: "C64 Pro STYLE";
-  src: url("C64_Pro-STYLE.ttf") format("truetype");
-  /* Add other font formats as needed */
-  font-weight: normal;
-  font-style: normal;
-}
-
+/* Your existing styles below */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Commodore64", Arial, sans-serif; /* Use the new font */
   margin: 0;
   padding: 0;
+  position: relative;
+  background-color: #000; /* Set the background color to black */
+  background-image: url("DreamMachineBackdrop.png"); /* Add the background image path */
+  background-size: contain; /* Adjust to contain the entire image within the viewport */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the background image */
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("buttoncontainers.png"); /* Add the correct path */
+  background-size: cover; /* Adjust to cover the entire pseudo-element */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  z-index: 1; /* Ensure the borders image is on top of the background image */
+}
+
+/* Updated styles for invisible header and footer */
 header {
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  background-color: #333;
-  color: white;
+  background-color: transparent; /* Set the background color to transparent */
+  color: #00ff00; /* Neon green text color */
+  z-index: 2; /* Ensure the header is on top */
 }
 
 main {
   display: flex;
+  flex-direction: column; /* Added to stack items vertically */
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -30,22 +45,38 @@ main {
 .center-box {
   text-align: center;
   padding: 20px;
-  border: 2px solid #333;
-  margin-bottom: 10px;
+  border: 2px solid rgba(51, 51, 51, 0.7); /* Adjust the alpha value for transparency */
+  margin-bottom: 10px; /* Adjust this value to your preference */
+}
+
+/* Adjusted z-index for all buttons */
+button {
+  z-index: 3; /* Ensure all buttons are on top of the containers image */
 }
 
 #generateBtn {
   padding: 10px;
   font-size: 16px;
   margin: 5px;
+  position: fixed;
+  bottom: 350px; /* Adjust the distance from the bottom as needed */
+  background-color: rgba(
+    51,
+    51,
+    51,
+    0.7
+  ); /* Adjust the alpha value for transparency */
+  color: #00ff00; /* Neon green text color */
+  z-index: 4; /* Ensure the generate button is on top of other buttons */
 }
 
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #333;
+  background-color: transparent; /* Set the background color to transparent */
   position: fixed;
   bottom: 0;
   width: 100%;
-  color: white;
+  color: #00ff00; /* Neon green text color */
+  z-index: 2; /* Ensure the footer is on top */
 }
