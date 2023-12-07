@@ -1,28 +1,88 @@
-/* Add this at the top of your CSS file */
-
-@font-face {
-  font-family: "Roboto";
-  src: url("Fonts/Commodore-64-v6.3.TTF") format("truetype");
-  /* Add other font formats as needed */
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Your existing styles below */
 body {
-  font-family: "Commodore-64-v6.3", Arial, sans-serif; /* Use the new font */
+  font-family: "Commodore64", Arial, sans-serif;
   margin: 0;
   padding: 0;
+  position: relative;
+  background-color: #000;
+  /* background-image: url("DreamMachineBackdrop.png"); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-/* Rest of your CSS */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("Untitled_Artwork 31.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0; /* Adjusted z-index */
+}
 
 header {
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  background-color: #333;
-  color: white;
+  background-color: transparent;
+  color: #00ff00;
+  z-index: 2;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  z-index: 1; /* Ensure main content is above button containers */
+}
+
+button {
+  position: relative;
+  z-index: 2; /* Ensure buttons are above button containers */
+}
+
+#submitBtn,
+#dreamBtn,
+#showcaseBtn,
+#whatAmIBtn,
+#generateBtn {
+  color: #00ff00;
+}
+
+#submitBtn {
+  font-size: 25px;
+  padding: 20px;
+  width: 320px;
+  height: 50px;
+  margin-left: 50px;
+  margin-top: 25px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#dreamBtn {
+  font-size: 70px;
+  padding: 15px;
+  width: 830px;
+  height: 100px;
+  margin-left: 50px;
+  margin-top: 5px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#showcaseBtn {
+  font-size: 25px;
+  padding: 25px;
+  width: 320px;
+  height: 40px;
+  margin-left: 50px;
+  margin-top: 33px;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .container {
