@@ -20,7 +20,7 @@ body::before {
   background-image: url("buttoncontainers.png");
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 0; /* Adjusted z-index */
+  z-index: 0;
 }
 
 header {
@@ -39,10 +39,8 @@ main {
   align-items: center;
   height: 100vh;
   position: relative;
-  z-index: 1; /* Ensure main content is above button containers */
+  z-index: 1;
 }
-
-/* Your existing styles below */
 
 .center-box {
   font-size: 25px;
@@ -56,13 +54,9 @@ main {
   word-wrap: break-word;
 }
 
-/* Rest of your existing styles */
-
-/* Your existing styles above */
-
 button {
   position: relative;
-  z-index: 2; /* Ensure buttons are above button containers */
+  z-index: 2;
 }
 
 #submitBtn,
@@ -113,15 +107,15 @@ button {
 }
 
 #generateBtn {
-  width: 50px; /* Set the width and height to create a circular button */
+  width: 50px;
   height: 50px;
   margin-right: 803px;
   margin-bottom: 20px;
-  border-radius: 50%; /* Make it circular */
-  background-color: #fff; /* Solid white background */
+  border-radius: 50%;
+  background-color: #fff;
   position: fixed;
   bottom: 350px;
-  right: 50px; /* Adjusted position for better placement */
+  right: 50px;
   z-index: 3;
   display: flex;
   align-items: center;
@@ -130,10 +124,10 @@ button {
 }
 
 #generateBtn::before {
-  content: ""; /* Use pseudo-element to create the circle */
-  width: 30px; /* Adjust the inner circle size */
+  content: "";
+  width: 30px;
   height: 30px;
-  background-color: #00ff00; /* Inner circle color */
+  background-color: #00ff00;
   border-radius: 50%;
   display: block;
 }
