@@ -2,11 +2,27 @@
 const imageInfo = [
   {
     url: "showcaseimages/Untitled_Artwork 31.png",
-    text: "fart",
+    text: "Hexing The Moon: Artist",
   },
   {
     url: "showcaseimages/Untitled_Artwork 32.png",
-    text: "Description for dart",
+    text: "I Am Kyle's Ceramic Mind: Artist",
+  },
+  {
+    url: "showcaseimages/Untitled_Artwork 33.png",
+    text: "I Am A Fold In Your Brain Now: Artist",
+  },
+  {
+    url: "showcaseimages/Untitled_Artwork 34.png",
+    text: "It Makes Babies Want To Cry",
+  },
+  {
+    url: "showcaseimages/Untitled_Artwork 36.png",
+    text: "Enter The Void: Artist",
+  },
+  {
+    url: "showcaseimages/Untitled_Artwork 35.png",
+    text: "Rip Her From Heaven: Artist",
   },
 ];
 

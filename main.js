@@ -17,9 +17,7 @@ const sentences = [
   // Make some responses appear as glitches of the machine crying out for help
 ];
 
-document
-  .getElementById("generateBtn")
-  .addEventListener("click", generateRandomSentence);
+document.getElementById("generateBtn").addEventListener("click");
 document
   .getElementById("whatAmIBtn")
   .addEventListener("click", redirectToWhatAmI);
